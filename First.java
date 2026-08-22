@@ -1,4 +1,15 @@
-class First{
+class Calculator{
+    int a;   //these are primitive variables
+
+    public int add(){
+        System.out.println("in add");
+        return 0;
+    }
+}
+
+
+
+public class First{
     public static void main(String args[]){
         // int a;
         // int b;
@@ -61,12 +72,30 @@ class First{
 
         // loops->while,do-while,for
 
-        int i=5;
+        // int i=5;
 
-        do 
-        {
-            System.out.println("Hi"+i);
-        }while(i<=4);
+        // do 
+        // {
+        //     System.out.println("Hi"+i);
+        // }while(i<=4);
+
+        // for loop
+        // for(int j=0;j<4;j++){
+        //     System.out.println("Hello");
+        // }
+        // for loop should have two semi colons inside it remaining others can be written outside
+
+
+        Calculator c= new Calculator();
+        // c is a variable/object of type calculator
+        c.add();
+
+        // completed till method overloading which is 3:33:00
+
+
+
+
+
 
 
     }
