@@ -346,3 +346,56 @@
 
 
 // import other.tools and other.*   packages are different bexause .* one imports all the files and not the within in files 
+
+
+
+// there are four types of access modifiers ----> public,private,protected and  default 
+
+
+
+// public types can be acccessed from anywhere,same file or other
+
+// private variables can be accessed from the same class only
+
+// default variables can be accessed from the same package only...
+
+
+// protected members can be accessed by subclasses in different packages, whereas default members cannot
+
+
+// polymorphism is of two types --> runtime polymorphism and compile time polymorphism
+
+// compile time polymorphism is method overloading while runtime polymorphism is method overriding 
+
+
+// dynamic method dispatch 
+
+// the above concept means creating an object of the parent class and instance of the child class
+
+// class A{
+    // public void show(){
+    //     System.out.println("In A show");
+    // }
+
+// }
+// class B extends class A{
+    // public void show(){
+    //     System.out.println("In B show");
+    // }
+
+// }
+
+// public class Demo{
+//     public static void main(String args[]){
+//         A obj= new A();
+//         obj.show();
+
+            // obj= new B();
+            // obj.show();
+//     }
+// }
+
+
+
+
+// the first reference method calls the object of A class while the second class reference calls for B
