@@ -399,3 +399,255 @@
 
 
 // the first reference method calls the object of A class while the second class reference calls for B
+
+// final keyword when used with variable makes it constraint to further updating it
+
+// if a class is made final, we cannot further inherit it
+
+// if we maake a method final,we cannot further override it
+
+
+//we can override the object class methods by defining it by ourselves accordingly
+
+// upcasting means refer to the parent class when creating an instance of lower class
+//  downcasting means refer to the lower class to access sub class properties
+
+
+// A obj= new B();
+// obj.show1();
+
+// B obj1= (B) obj;
+// obj1.show2();
+
+//Autoboxing in Java is the automatic conversion that the Java compiler makes between a primitive data type and its corresponding object wrapper class. For instance, the compiler automatically converts an int to an Integer, or a double to a Double
+
+
+
+
+// class A{
+
+// }
+// class B extends A{
+
+// }
+// class Demo{
+//     public static void main(String[] args) {
+//         A obj= (A) new B();
+//         obj1.show();
+//     }
+// }
+
+
+// Wrapper class in Java is 
+//A wrapper class in Java is a class that encapsulates (wraps) a primitive data type into a corresponding reference object. This enables primitive values to participate in object-oriented operations, such as being stored inside collections or utilized within generic APIS
+
+
+
+// abstract method can only belong to abstract class
+
+// also IF we just want to declare the method but want to further use it, so then we use the abstract keyword.We can define it later or in further classes.
+
+
+// also you cannot create an object of abstract class,abstract means giving a rough idea or plan but not the exact implementation
+
+// abstract class can have abstract or non-abstract methods
+
+// if some abstract method is declared,then all must be written or expanded later 
+
+
+
+//inner class---> a class within a class
+
+// class A{
+//     int age;
+//     int poi;
+
+//     class B{
+//         .....
+//     }
+// }
+
+
+// ?by compiling it ,we get A$B class 
+
+
+// A.B obj1 =  obj.new B();
+
+// static can be used in inner class only not outer class
+
+
+// anonymous inner class
+
+// A obj= new A()
+// {
+//     public void show(){
+//         System.out.println("in new show")
+//     }
+// };
+
+
+// interfaces in easy words(w3 schools)--->
+
+//Interfaces
+
+// Another way to achieve abstraction in Java, is with interfaces.
+
+//An interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+
+//// interface
+// interface Animal {
+//   public void animalSound(); // interface method (does not have a body)
+//   public void run(); // interface method (does not have a body)
+// }
+
+// abstract class A --> interface A    interface is not a class
+
+// by default its methods are public abstract
+
+// variables in interface are final and static, it means we have to instantiate it with a value
+
+// interface A{
+//     int age=40;
+//     int val=20;
+
+//     public void show();
+//     public void config();
+// }
+
+
+// class B implements A{
+//     public void show(){
+//         System.out.println("in show");
+//     }
+//     public void config(){
+//         System.out.println("in config");
+//     }
+// }
+
+
+// if I am writing a class which implements the interfaces,then it must complete all the half written methods
+
+// a class can implement multiple interfaces 
+// class A implements B,C,D
+
+// interfaces can be extended
+// interface Y extends X
+
+// enums-->enumerated constants
+
+
+// enum Status{
+//     Running,Failed,Pending,Success;
+// }
+
+// Status s= Status.Running;
+// enum works like a class only where the types are like objects
+
+
+
+// enum Status{
+// 	Running, Failed, Pending, Success;
+// }
+
+// public class Demo {
+//     public static void main(String[] args) {
+
+//     	int i=5;
+//    	Status s= Status.Running;
+//    	Status s= Status.Failed;
+//    	Status s= Status.NoIdea;
+//    	Status s= Status.Success;
+    	
+//    	System.out.println(s);
+//    	System.out.println(s.ordinal());
+
+
+    	
+    // 	Status[] ss=Status.values();
+    // 	System.out.println(ss);
+    	
+    // 	for(Status s:ss)
+    // 	{
+    // 		System.out.println(s);
+    // 		System.out.println(s+" : "+s.ordinal());
+    // 	}
+    // }
+
+
+
+// enum Status{
+// 	Running, Failed, Pending, Success;
+// }
+
+// public class Demo {
+//     public static void main(String[] args) {
+
+//     	Status s=Status.Pending;
+    	
+//     	switch(s)
+//     	{
+//     		case Running:
+//     			System.out.println("All Good");
+//     			break;
+    			
+//     		case Failed:
+//     			System.out.println("Try Again");
+//     			break;
+    			
+//     		case Pending:
+//     			System.out.println("Please Wait");
+//     			break;
+    		
+//     		default:
+//     			System.out.println("Done");
+//     			break;
+//     	}
+    	
+//     	if(s==Status.Running)
+//     		System.out.println("All Good");
+//     	else if(s==Status.Failed)
+//     		System.out.println("Try Again");
+//     	else if ( s==Status.Pending)
+//     		System.out.println("Please Wait");
+//     	else
+//     		System.out.println("Done");
+//     }
+// }
+
+
+
+
+
+// @Override---> no use 
+
+// @Deprecated--> used above class,it means use it but don't use it 
+
+
+// types of interfaces
+
+// normal-->interface with multiple methods
+
+// functional --->sam/ interface with single methods
+
+// marker---> marker/ interface with no methods
+
+
+// ?functional interface has an annotation --> @FunctionalInterface
+
+
+// we can use lambda expression with functional interface 
+
+
+@FunctionalInterface
+interface A{
+    void show();
+}
+
+public class First{
+    public static void main(String args[]){
+        A obj=()->  System.out.println("In show");
+
+        obj.show();
+    }
+}
