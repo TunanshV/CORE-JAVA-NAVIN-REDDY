@@ -651,3 +651,119 @@ public class First{
         obj.show();
     }
 }
+
+
+
+// Exceptions
+
+// compile time error
+// runtime error  --> suddenly execution stops bcs of sme missing file 
+// logical error
+
+
+//runtime errors are called exceptions
+
+// int i=0;
+// int j=0;
+
+// try{
+//     j=18/i;
+// }
+// catch(Exception e)
+// {
+//     System.out.println("Something went wrong!!");
+// }
+
+
+// first java tries to run code in try block,then it executes catch part 
+
+// we can write multiple catch blocks
+
+// ArithmeticException
+// ArrayIndexOutOfBoundsException
+// Exception class handles all of the exception like handles all of them 
+
+
+// we can print the exception as well
+
+
+//NullPointerException means exception that makes use of a program that points to null
+
+
+// exception hierarchy
+
+// throw vs throws
+
+
+// we can build our own exception
+
+
+// class NavinException extends Exception{
+//     public NavinException(String str){
+//         System.out.println(str);
+//     }
+// }
+
+// public static void main(String args[]){
+//       int i=20;
+//       int j=0;
+
+//       try{
+//         j=18/i;
+//         if(j==0)
+//             throw new NavinException(string:"I don't want to ")
+//       }
+//       catch{
+
+//       }
+// }
+
+
+// throws basically means ducking the exception
+// d() throws Exception
+// e() throws Exception
+
+
+// if we don't want to write a catch,we use finally
+
+// there are certain steps or processes which we have to surely run instead of the exception,that part is written in the finally 
+
+
+// newer versions have try with resources instead of try and finally keyword 
+
+
+// if we want to use thread in a class, we use class A extends Thread or class B extends Thread or Runnable
+
+// in every thread we need to have the run method
+
+// threads are started using the .start() method
+
+
+// threads priority
+
+// range of priority is 1-10  (by default it is 5) 10 is maximum
+// different schedulers have different priority
+
+// obj2.setPriority(Thread.MAX_PRIORITY)
+
+
+// Thread.sleep(millis:10)  waits for 10 milliseconds
+
+// thread.sleep needs try catch block as it is a checked exception
+
+// thread is a class which implements runnable 
+
+
+// we can even use lambda version in runnable objects as implementation
+
+
+
+// threads vs mutation
+
+
+// thread safe --> only one thread can work at a time 
+
+// .join() is used to join the two threads   it may throw exception
+
+
+// synchronized keyword makes sure the method is callled only once
